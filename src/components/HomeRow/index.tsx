@@ -1,7 +1,16 @@
 import styled from "styled-components";
+import {
+  BiHomeAlt,
+  BiSearchAlt2,
+  BiCartAlt,
+  BiInfoCircle,
+  BiUser,
+} from "react-icons/bi";
 
 const HomeRowStyles = styled.div`
-  /* border: solid 1px red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100vw;
   height: 10vh;
 `;
@@ -9,7 +18,11 @@ const HomeRowStyles = styled.div`
 const HomeRow = () => {
   return (
     <HomeRowStyles>
-      <div>Home Row</div>
+      <BiHomeAlt />
+      <BiSearchAlt2 />
+      <BiCartAlt />
+      <BiInfoCircle />
+      <BiUser />
     </HomeRowStyles>
   );
 };
