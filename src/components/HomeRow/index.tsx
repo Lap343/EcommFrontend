@@ -15,6 +15,8 @@ const HomeRowStyles = styled.div`
   height: 10vh;
   background-color: #262626;
   border-radius: 0px 0px 25px 25px;
+  position: fixed;
+  bottom: 0;
 
   & svg {
     height: auto;
