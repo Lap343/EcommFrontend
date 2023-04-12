@@ -1,11 +1,11 @@
-import MainContent from "./components/MainContent";
+import HomeContent from "./components/HomeContent";
 import HomeRow from "./components/HomeRow";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
-      <MainContent />
+      <HomeContent />
       <HomeRow />
     </div>
   );

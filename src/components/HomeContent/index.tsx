@@ -22,7 +22,7 @@ const TopSellersItemStyles = styled.div`
   justify-content: space-between;
 `;
 
-const MainContent = () => {
+const HomeContent = () => {
   return (
     <MainContentStyles>
       <MainHeaderSyles>The Hobbs Store</MainHeaderSyles>
@@ -44,4 +44,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default HomeContent;
