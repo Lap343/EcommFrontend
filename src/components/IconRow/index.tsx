@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import {
   BiHomeAlt,
   BiSearchAlt2,
@@ -28,11 +29,21 @@ const HomeRowStyles = styled.div`
 const IconRow = () => {
   return (
     <HomeRowStyles>
-      <BiHomeAlt style={{ color: "#E1FF6B" }} />
-      <BiSearchAlt2 />
-      <BiCartAlt />
-      <BiInfoCircle />
-      <BiUser />
+      <Link to="/">
+        <BiHomeAlt style={{ color: "#E1FF6B" }} />
+      </Link>
+      <Link to="/search">
+        <BiSearchAlt2 />
+      </Link>
+      <Link to="/cart">
+        <BiCartAlt />
+      </Link>
+      <Link to="/info">
+        <BiInfoCircle />
+      </Link>
+      <Link to="/user">
+        <BiUser />
+      </Link>
     </HomeRowStyles>
   );
 };
