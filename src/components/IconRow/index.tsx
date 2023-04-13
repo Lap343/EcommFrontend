@@ -25,7 +25,7 @@ const HomeRowStyles = styled.div`
   }
 `;
 
-const HomeRow = () => {
+const IconRow = () => {
   return (
     <HomeRowStyles>
       <BiHomeAlt style={{ color: "#E1FF6B" }} />
@@ -37,4 +37,4 @@ const HomeRow = () => {
   );
 };
 
-export default HomeRow;
+export default IconRow;
