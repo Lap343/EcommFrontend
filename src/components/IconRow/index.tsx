@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   BiHomeAlt,
   BiSearchAlt2,
@@ -18,31 +18,52 @@ const HomeRowStyles = styled.div`
   border-radius: 0px 0px 25px 25px;
   position: fixed;
   bottom: 0;
+`;
 
+interface StyledSvgPropsInterface {
+  path: string;
+  location: string;
+}
+
+const StyledSvg = styled.div<StyledSvgPropsInterface>`
   & svg {
     height: auto;
     width: 2em;
-    color: #414141;
+    color: ${(props) =>
+      props.path === props.location ? "#E1FF6B" : "#414141"};
   }
 `;
 
 const IconRow = () => {
+  const location = useLocation();
+  console.log(location.pathname);
+
   return (
     <HomeRowStyles>
       <Link to="/">
-        <BiHomeAlt style={{ color: "#E1FF6B" }} />
+        <StyledSvg path="/" location={location.pathname}>
+          <BiHomeAlt />
+        </StyledSvg>
       </Link>
       <Link to="/search">
-        <BiSearchAlt2 />
+        <StyledSvg path="/search" location={location.pathname}>
+          <BiSearchAlt2 />
+        </StyledSvg>
       </Link>
       <Link to="/cart">
-        <BiCartAlt />
+        <StyledSvg path="/cart" location={location.pathname}>
+          <BiCartAlt />
+        </StyledSvg>
       </Link>
       <Link to="/info">
-        <BiInfoCircle />
+        <StyledSvg path="/info" location={location.pathname}>
+          <BiInfoCircle />
+        </StyledSvg>
       </Link>
       <Link to="/user">
-        <BiUser />
+        <StyledSvg path="/user" location={location.pathname}>
+          <BiUser />
+        </StyledSvg>
       </Link>
     </HomeRowStyles>
   );

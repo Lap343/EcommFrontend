@@ -1,10 +1,5 @@
 import { BiSearchAlt2 } from "react-icons/bi";
-import {
-  MainContentStyles,
-  MainHeaderSyles,
-  SubContentStyles,
-  SubHeaderSyles,
-} from "../componentStyles";
+import { MainContentStyles, MainHeaderSyles } from "../componentStyles";
 import SearchInput from "./SearchInput";
 import PriceRange from "./PriceRange";
 import Catagories from "./Catagories";
