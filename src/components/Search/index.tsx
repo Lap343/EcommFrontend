@@ -1,21 +1,27 @@
 import { BiSearchAlt2 } from "react-icons/bi";
-import { MainHeaderSyles } from "../componentStyles";
+import {
+  MainContentStyles,
+  MainHeaderSyles,
+  SubContentStyles,
+  SubHeaderSyles,
+} from "../componentStyles";
+import SearchInput from "./SearchInput";
 
 const SearchPage = () => {
   return (
-    <>
+    <MainContentStyles>
       <MainHeaderSyles>
         <BiSearchAlt2 />
         Search
       </MainHeaderSyles>
-      <input placeholder="Search" />
-      <div>
-        <div>Price Range:</div>
-      </div>
-      <div>
-        <div>Catagories:</div>
-      </div>
-    </>
+      <SearchInput />
+      <SubContentStyles>
+        <SubHeaderSyles>Price Range:</SubHeaderSyles>
+      </SubContentStyles>
+      <SubContentStyles>
+        <SubHeaderSyles>Catagories:</SubHeaderSyles>
+      </SubContentStyles>
+    </MainContentStyles>
   );
 };
 

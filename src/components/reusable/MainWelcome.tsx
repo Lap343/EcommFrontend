@@ -30,7 +30,7 @@ const AfterMainStyles = styled.div`
   height: 8.9em;
   background-color: #e1ff6b;
   position: absolute;
-  padding: 2em 1.5em;
+  padding: 2.7em 1.5em;
   border: solid black 1px;
   border-radius: 25px;
 `;

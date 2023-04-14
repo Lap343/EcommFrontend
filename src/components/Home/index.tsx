@@ -1,19 +1,11 @@
 import styled from "styled-components";
-import { MainHeaderSyles, SubHeaderSyles } from "../componentStyles";
+import {
+  MainContentStyles,
+  MainHeaderSyles,
+  SubHeaderSyles,
+  SubContentStyles,
+} from "../componentStyles";
 import { ItemCard, MainWelcome } from "../reusable";
-
-const MainContentStyles = styled.div`
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 10vh;
-`;
-
-const TopSellersStyles = styled.div`
-  width: 85%;
-  align-items: start;
-`;
 
 const TopSellersItemStyles = styled.div`
   display: flex;
@@ -31,7 +23,7 @@ const HomeContent = () => {
         Welcome to our store! Here we have our crafts and hobbies for sale.
         PLEASE give us your money!"
       />
-      <TopSellersStyles>
+      <SubContentStyles>
         <SubHeaderSyles>Top Sellers:</SubHeaderSyles>
         <TopSellersItemStyles>
           <ItemCard />
@@ -39,7 +31,7 @@ const HomeContent = () => {
           <ItemCard />
           <ItemCard />
         </TopSellersItemStyles>
-      </TopSellersStyles>
+      </SubContentStyles>
     </MainContentStyles>
   );
 };
