@@ -36,8 +36,6 @@ const StyledSvg = styled.div<StyledSvgPropsInterface>`
 
 const IconRow = () => {
   const location = useLocation();
-  console.log(location.pathname);
-
   return (
     <HomeRowStyles>
       <Link to="/">

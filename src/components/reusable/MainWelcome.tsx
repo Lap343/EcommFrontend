@@ -21,8 +21,28 @@ const MainWelcomeContentSyles = styled.div`
   padding: 4em 1.5em;
   border: 1px solid black;
   border-radius: 25px;
-  z-index: 1;
+  z-index: 2;
   position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #e1ff6b;
+    border: 1px solid black;
+    border-radius: 25px;
+    z-index: -1;
+    bottom: -5px;
+  }
 `;
 
 const AfterMainStyles = styled.div`
@@ -39,7 +59,7 @@ export const MainWelcome: React.FC<Props> = ({ content }) => {
   return (
     <MainWelcomeSyles>
       <MainWelcomeContentSyles>{content}</MainWelcomeContentSyles>
-      <AfterMainStyles />
+      {/* <AfterMainStyles /> */}
     </MainWelcomeSyles>
   );
 };
