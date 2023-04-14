@@ -6,6 +6,7 @@ import {
   SubHeaderSyles,
 } from "../componentStyles";
 import SearchInput from "./SearchInput";
+import PriceRange from "./PriceRange";
 
 const SearchPage = () => {
   return (
@@ -15,9 +16,7 @@ const SearchPage = () => {
         Search
       </MainHeaderSyles>
       <SearchInput />
-      <SubContentStyles>
-        <SubHeaderSyles>Price Range:</SubHeaderSyles>
-      </SubContentStyles>
+      <PriceRange />
       <SubContentStyles>
         <SubHeaderSyles>Catagories:</SubHeaderSyles>
       </SubContentStyles>

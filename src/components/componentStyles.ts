@@ -13,7 +13,6 @@ export const MainContentStyles = styled.div`
 export const SubContentStyles = styled.div`
   margin: 1em 0;
   width: 100%;
-  align-items: start;
 `;
 
 export const MainHeaderSyles = styled.div`
