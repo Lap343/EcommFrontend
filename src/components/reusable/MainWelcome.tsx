@@ -49,7 +49,6 @@ export const MainWelcome: React.FC<Props> = ({ content }) => {
   return (
     <MainWelcomeSyles>
       <MainWelcomeContentSyles>{content}</MainWelcomeContentSyles>
-      {/* <AfterMainStyles /> */}
     </MainWelcomeSyles>
   );
 };

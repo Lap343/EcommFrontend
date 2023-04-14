@@ -3,47 +3,65 @@ import styled from "styled-components";
 
 const SearchInputConatiner = styled.div`
   position: relative;
+  display: flex;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 25px;
+  padding: 0.5em;
+  width: 90%;
+  z-index: 2;
+  position: relative;
   margin: 1em 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #e1ff6b;
+    border: 1px solid black;
+    border-radius: 25px;
+    z-index: -1;
+    bottom: -5px;
+  }
 `;
 
 const SearchBoxIcon = styled(BiSearchAlt2)`
   height: auto;
   width: 2em;
-  position: absolute;
   color: grey;
   top: 22%;
   left: 7%;
-  z-index: 2;
 `;
 
-const SearchBox = styled.input`
+const SearchBoxInput = styled.input`
   position: relative;
-  width: 78%;
-  padding: 0.5em 1em 0.5em 2em;
+  height: 2em;
   color: black;
   background-color: white;
-  border: solid black 1px;
-  border-radius: 25px;
+  border: none;
   font-size: 1.5em;
-  z-index: 1;
-`;
-
-const AfterSearchBox = styled.div`
-  width: 100%;
-  background-color: #e1ff6b;
-  position: absolute;
-  padding: 1.75em 0em;
-  border: solid black 1px;
   border-radius: 25px;
-  top: 0;
+  width: 90%;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const SearchInput = () => {
   return (
     <SearchInputConatiner>
       <SearchBoxIcon />
-      <SearchBox placeholder="" />
-      <AfterSearchBox />
+      <SearchBoxInput placeholder="Search" />
     </SearchInputConatiner>
   );
 };
