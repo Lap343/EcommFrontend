@@ -7,6 +7,7 @@ import {
 } from "../componentStyles";
 import SearchInput from "./SearchInput";
 import PriceRange from "./PriceRange";
+import Catagories from "./Catagories";
 
 const SearchPage = () => {
   return (
@@ -17,9 +18,7 @@ const SearchPage = () => {
       </MainHeaderSyles>
       <SearchInput />
       <PriceRange />
-      <SubContentStyles>
-        <SubHeaderSyles>Catagories:</SubHeaderSyles>
-      </SubContentStyles>
+      <Catagories />
     </MainContentStyles>
   );
 };
