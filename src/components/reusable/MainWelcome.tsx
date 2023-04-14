@@ -45,16 +45,6 @@ const MainWelcomeContentSyles = styled.div`
   }
 `;
 
-const AfterMainStyles = styled.div`
-  width: 75%;
-  height: 8.9em;
-  background-color: #e1ff6b;
-  position: absolute;
-  padding: 2.7em 1.5em;
-  border: solid black 1px;
-  border-radius: 25px;
-`;
-
 export const MainWelcome: React.FC<Props> = ({ content }) => {
   return (
     <MainWelcomeSyles>
