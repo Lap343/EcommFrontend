@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { MainContentStyles, MainHeaderSyles } from "../componentStyles";
 import CartItem from "./CartItem";
 import { BiCartAlt } from "react-icons/bi";
+import CartTotalsInfo from "./CartTotalsInfo";
 
 const CartHeader = styled.div`
   width: 100%;
@@ -12,7 +13,7 @@ const CartHeader = styled.div`
 
   & div {
     font-weight: bold;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #5e5e5e;
     padding: 0.2em;
   }
 `;
@@ -29,6 +30,7 @@ const CartPage = () => {
       </CartHeader>
       <CartItem />
       <CartItem />
+      <CartTotalsInfo />
     </MainContentStyles>
   );
 };
