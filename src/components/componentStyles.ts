@@ -8,6 +8,7 @@ export const MainContentStyles = styled.div`
   flex-direction: column;
   align-items: center;
   padding-bottom: 10vh;
+  overflow: hidden;
 `;
 
 export const SubContentStyles = styled.div`
