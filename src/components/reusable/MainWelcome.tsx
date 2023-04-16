@@ -14,15 +14,17 @@ const MainWelcomeSyles = styled.div`
 `;
 
 const MainWelcomeContentSyles = styled.div`
-  width: 75%;
+  width: 80%;
   background-color: white;
   color: black;
   font-weight: bold;
   padding: 4em 1.5em;
   border: 1px solid black;
   border-radius: 25px;
-  z-index: 2;
+  z-index: 1;
   position: relative;
+  isolation: isolate;
+  text-align: center;
 
   &::after {
     content: "";

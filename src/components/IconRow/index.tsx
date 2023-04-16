@@ -18,6 +18,7 @@ const HomeRowStyles = styled.div`
   border-radius: 0px 0px 25px 25px;
   position: fixed;
   bottom: 0;
+  z-index: 10;
 `;
 
 interface StyledSvgPropsInterface {
