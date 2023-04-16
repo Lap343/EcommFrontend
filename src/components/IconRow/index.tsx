@@ -59,8 +59,8 @@ const IconRow = () => {
           <BiInfoCircle />
         </StyledSvg>
       </Link>
-      <Link to="/user">
-        <StyledSvg path="/user" location={location.pathname}>
+      <Link to="/account">
+        <StyledSvg path="/account" location={location.pathname}>
           <BiUser />
         </StyledSvg>
       </Link>
