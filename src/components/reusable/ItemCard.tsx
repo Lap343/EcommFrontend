@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { BiHeart } from "react-icons/bi";
+import { GoHeart } from "react-icons/go";
+import { useState } from "react";
 
 interface Props {
   imgSrc: string;
@@ -27,7 +29,7 @@ const ItemImg = styled.img`
   border-radius: 25px;
 `;
 
-const HeartBtn = styled(BiHeart)`
+const BlackHeartBtn = styled(BiHeart)`
   height: 1.75em;
   width: 1.75em;
   color: black;
@@ -36,14 +38,41 @@ const HeartBtn = styled(BiHeart)`
   position: absolute;
   top: 5%;
   right: 5%;
+  padding: 0.25em;
+`;
+
+const RedHeartBtn = styled(GoHeart)`
+  height: 1.75em;
+  width: 1.75em;
+  color: red;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 0.25em;
 `;
 
 export const ItemCard: React.FC<Props> = ({ imgSrc, alt, title, price }) => {
+  const [isFavorited, setIsFavorited] = useState(false);
+
   return (
     <ItemCardContainer>
       <ItemImgContainer>
         <ItemImg src={imgSrc} alt={alt} />
-        <HeartBtn />
+        {isFavorited ? (
+          <RedHeartBtn
+            onClick={() => {
+              setIsFavorited(!isFavorited);
+            }}
+          />
+        ) : (
+          <BlackHeartBtn
+            onClick={() => {
+              setIsFavorited(!isFavorited);
+            }}
+          />
+        )}
       </ItemImgContainer>
       <div>{title}</div>
       <div>{price}</div>
