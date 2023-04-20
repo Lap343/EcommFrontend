@@ -38,6 +38,18 @@ const HomeContent = () => {
             title="Birthday Card"
             price="$20.00"
           />
+          <ItemCard
+            imgSrc="https://i.pinimg.com/236x/51/86/3b/51863b30683212ddc948179c7cfe253f--wooden-drawers-wood-chest.jpg"
+            alt="Small wooden drawer"
+            title="Wooden Drawer"
+            price="$10.00"
+          />
+          <ItemCard
+            imgSrc="https://i5.walmartimages.com/asr/4792bcd5-0d4e-48d6-a37d-6f79c8f1c767.dcb05e40920aad2dcde99a3a53e56d80.jpeg"
+            alt="Plushie penguin"
+            title="Plushie Penguin"
+            price="$100.00"
+          />
         </TopSellersItemStyles>
       </SubContentStyles>
     </MainContentStyles>

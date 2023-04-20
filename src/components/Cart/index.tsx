@@ -28,8 +28,20 @@ const CartPage = () => {
       <CartHeader>
         <div>Quantity</div>
       </CartHeader>
-      <CartItem />
-      <CartItem />
+      <CartItem
+        imgSrc="https://news.chapman.edu/wp-content/uploads/2022/09/Angels-Flight-Carlos-Manriquez-740x556.jpg"
+        alt="Painting of a city's bridge"
+        title="Painting"
+        price="$40.00"
+        quantity={1}
+      />
+      <CartItem
+        imgSrc="https://i.ytimg.com/vi/Lxd80JnvDmo/maxresdefault.jpg"
+        alt="Birthday card with and open accordion style. A birthday opens up with the card"
+        title="Birthday Card"
+        price="$20.00"
+        quantity={3}
+      />
       <CartTotalsInfo />
     </MainContentStyles>
   );

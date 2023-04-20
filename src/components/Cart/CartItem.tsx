@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+interface Props {
+  imgSrc: string;
+  alt: string;
+  title: string;
+  price: string;
+  quantity: number;
+}
+
 const CartItemContainer = styled.div`
   width: 100%;
   display: flex;
@@ -65,23 +73,20 @@ const RemoveBtn = styled.div`
   border-radius: 25px;
 `;
 
-const CartItem = () => {
+const CartItem: React.FC<Props> = ({ imgSrc, alt, title, price, quantity }) => {
   return (
     <CartItemContainer>
       <ItemContainer>
-        <ItemImg
-          src="https://news.chapman.edu/wp-content/uploads/2022/09/Angels-Flight-Carlos-Manriquez-740x556.jpg"
-          alt="painting of a city's bridge"
-        />
+        <ItemImg src={imgSrc} alt={alt} />
         <ItemInfoContainer>
-          <div>Painting</div>
-          <div>$40.00</div>
+          <div>{title}</div>
+          <div>{price}</div>
         </ItemInfoContainer>
       </ItemContainer>
       <ItemQuantityContainer>
         <AddRemoveQuantityContainer>
           <GreyBtn>-</GreyBtn>
-          <WhiteBtn>1</WhiteBtn>
+          <WhiteBtn>{quantity}</WhiteBtn>
           <GreyBtn>+</GreyBtn>
         </AddRemoveQuantityContainer>
         <RemoveBtn>Remove</RemoveBtn>
