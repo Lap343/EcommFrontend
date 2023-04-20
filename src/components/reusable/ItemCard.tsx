@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import { BiHeart } from "react-icons/bi";
 
+interface Props {
+  imgSrc: string;
+  alt: string;
+  title: string;
+  price: string;
+}
+
 const ItemCardContainer = styled.div`
   width: 35vw;
   display: flex;
@@ -31,18 +38,15 @@ const HeartBtn = styled(BiHeart)`
   right: 5%;
 `;
 
-export const ItemCard = () => {
+export const ItemCard: React.FC<Props> = ({ imgSrc, alt, title, price }) => {
   return (
     <ItemCardContainer>
       <ItemImgContainer>
-        <ItemImg
-          src="https://news.chapman.edu/wp-content/uploads/2022/09/Angels-Flight-Carlos-Manriquez-740x556.jpg"
-          alt="painting of a city's bridge"
-        />
+        <ItemImg src={imgSrc} alt={alt} />
         <HeartBtn />
       </ItemImgContainer>
-      <div>Painting</div>
-      <div>$40.00</div>
+      <div>{title}</div>
+      <div>{price}</div>
     </ItemCardContainer>
   );
 };
