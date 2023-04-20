@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { BiHeart } from "react-icons/bi";
-import { GoHeart } from "react-icons/go";
+import { HiOutlineHeart, HiHeart } from "react-icons/hi";
 import { useState } from "react";
 
 interface Props {
@@ -29,7 +28,7 @@ const ItemImg = styled.img`
   border-radius: 25px;
 `;
 
-const BlackHeartBtn = styled(BiHeart)`
+const BlackHeartBtn = styled(HiOutlineHeart)`
   height: 1.75em;
   width: 1.75em;
   color: black;
@@ -41,7 +40,7 @@ const BlackHeartBtn = styled(BiHeart)`
   padding: 0.25em;
 `;
 
-const RedHeartBtn = styled(GoHeart)`
+const RedHeartBtn = styled(HiHeart)`
   height: 1.75em;
   width: 1.75em;
   color: red;
