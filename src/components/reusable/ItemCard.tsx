@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { HiOutlineHeart, HiHeart } from "react-icons/hi";
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
   imgSrc: string;
@@ -28,28 +29,34 @@ const ItemImg = styled.img`
   border-radius: 25px;
 `;
 
-const BlackHeartBtn = styled(HiOutlineHeart)`
-  height: 1.75em;
-  width: 1.75em;
-  color: black;
-  background-color: white;
-  border-radius: 25px;
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  padding: 0.25em;
-`;
-
 const RedHeartBtn = styled(HiHeart)`
   height: 1.75em;
   width: 1.75em;
   color: red;
   background-color: white;
   border-radius: 25px;
+  padding: 0.25em;
+`;
+
+const RedHeartBtnContainer = styled(motion.div)`
   position: absolute;
   top: 5%;
   right: 5%;
+`;
+
+const BlackHeartBtn = styled(HiOutlineHeart)`
+  height: 1.75em;
+  width: 1.75em;
+  color: black;
+  background-color: white;
+  border-radius: 25px;
   padding: 0.25em;
+`;
+
+const BlackHeartBtnContainer = styled(motion.div)`
+  position: absolute;
+  top: 5%;
+  right: 5%;
 `;
 
 export const ItemCard: React.FC<Props> = ({ imgSrc, alt, title, price }) => {
@@ -59,19 +66,31 @@ export const ItemCard: React.FC<Props> = ({ imgSrc, alt, title, price }) => {
     <ItemCardContainer>
       <ItemImgContainer>
         <ItemImg src={imgSrc} alt={alt} />
-        {isFavorited ? (
-          <RedHeartBtn
-            onClick={() => {
-              setIsFavorited(!isFavorited);
-            }}
-          />
-        ) : (
-          <BlackHeartBtn
-            onClick={() => {
-              setIsFavorited(!isFavorited);
-            }}
-          />
-        )}
+        <AnimatePresence>
+          {isFavorited ? (
+            <RedHeartBtnContainer
+              onClick={() => {
+                setIsFavorited(!isFavorited);
+              }}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+            >
+              <RedHeartBtn />
+            </RedHeartBtnContainer>
+          ) : (
+            <BlackHeartBtnContainer
+              onClick={() => {
+                setIsFavorited(!isFavorited);
+              }}
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0 }}
+            >
+              <BlackHeartBtn />
+            </BlackHeartBtnContainer>
+          )}
+        </AnimatePresence>
       </ItemImgContainer>
       <div>{title}</div>
       <div>{price}</div>
